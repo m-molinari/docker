@@ -2,7 +2,7 @@
 FROM centos:8
 
 RUN yum -y --setopt=tsflags=nodocs update && \
-    yum -y --setopt=tsflags=nodocs install httpd && \
+    yum -y --setopt=tsflags=nodocs install httpd mod_ssl openssl && \
     yum clean all
 
 EXPOSE 80
